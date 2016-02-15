@@ -1,0 +1,20 @@
+<div>TO BE EATEN:
+{{#each toEat}}
+<ul>
+  <form action="/devour/{{id}}" method="post">
+    <div>{{id}}. {{burger_name}}    <button type='submit'>Devour</button> </div>
+
+  </form>
+</ul>
+{{/each}}
+DEVOURED
+{{#each devoured}}
+<ul>
+  {{id}}. {{burger_name}}
+</ul>
+{{/each}}
+<form action='/' method="post">
+  <textarea name='burgerInput' rows='3' cols='30'></textarea>
+  <button type='submit'>Burger</button>
+</form>
+</div>
